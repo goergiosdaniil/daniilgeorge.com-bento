@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
-title: "Hello, World"
+title: "Hello Sadness"
 description: "this is a post example"
 pubDate: 2023-01-21
 category: "intro"

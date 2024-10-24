@@ -1,33 +1,11 @@
 ---
-import { getCurrentTimeInItaly, formatTimeForItaly } from "../lib/helpers";
 import Card from "./Card/index.astro";
 ---
 
-<script>
-  import { onCleanup, onMount } from "solid-js";
-  import { formatTimeForItaly } from "../lib/helpers";
 
-  let interval: ReturnType<typeof setInterval>;
-
-  function updateClock() {
-    const timeDisplay = document.getElementById("timeDisplay");
-    const now = new Date();
-
-    if (timeDisplay) {
-      timeDisplay.textContent = formatTimeForItaly(now);
-      timeDisplay.setAttribute("datetime", now.toISOString());
-    }
-  }
-
-  onMount(() => {
-    interval = setInterval(updateClock, 1000);
-  });
-
-  onCleanup(() => {
-    clearInterval(interval);
-  });
-</script>
-
-<Card colSpan="lg:col-span-2" rowSpan="md:row-span-2" title="Clown">
-Paparia
+<Card colSpan="lg:col-span-2" rowSpan="md:row-span-2" title="Next Races">
+Athens 10k 10 November 2024
+Amsterdam HalfMarathon 16 March 2025
+Patras HalfMarathon 6 April 2025
+Copengaen Marathon 11 May 2025
 </Card>
